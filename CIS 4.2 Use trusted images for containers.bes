@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Fixlet>
+		<Title>CIS 4.2 Use trusted images for containers</Title>
+		<Description>Use images from trusted sources.</Description>
+		<Relevance><![CDATA[exists it whose (item 0 of it != item 1 of it) of (it as trimmed string, lines of file "/tmp/white_image_ids.txt" as trimmed string) of (following texts of positions (start of substring "IMAGE ID" of line 1 of file "/tmp/docker_images.txt") of (preceding texts of positions (start of substring "CREATED" of line 1 of file "/tmp/docker_images.txt") of lines whose (line number of it > 1) of file "/tmp/docker_images.txt"))]]></Relevance>
+		<Category></Category>
+		<Source>Internal</Source>
+		<SourceID></SourceID>
+		<SourceReleaseDate>2015-09-09</SourceReleaseDate>
+		<SourceSeverity></SourceSeverity>
+		<CVENames></CVENames>
+		<SANSID></SANSID>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Wed, 09 Sep 2015 12:17:58 +0000</Value>
+		</MIMEField>
+		<Domain>BESC</Domain>
+		<DefaultAction ID="Action1">
+			<Description>
+				<PreLink>Click </PreLink>
+				<Link>here</Link>
+				<PostLink> to deploy this action.</PostLink>
+			</Description>
+			<ActionScript MIMEType="application/x-Fixlet-Windows-Shell">// Enter your action script here</ActionScript>
+		</DefaultAction>
+	</Fixlet>
+</BES>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Fixlet>
+		<Title>CIS 3.18 Verify that registry certificate files permissions are set to 444 or more restrictive</Title>
+		<Description>CIS 3.18 Verify that registry certificate files permissions are set to 444 or more restrictive. These are located in /etc/docker/certs.d </Description>
+		<Relevance><![CDATA[exists file whose (integer (user mask of it as string & group mask of it as string & other mask of it as string) > 444 ) of descendant folders of folder "/etc/docker/certs.d"]]></Relevance>
+		<Category></Category>
+		<Source>Internal</Source>
+		<SourceID></SourceID>
+		<SourceReleaseDate>2015-04-08</SourceReleaseDate>
+		<SourceSeverity></SourceSeverity>
+		<CVENames></CVENames>
+		<SANSID></SANSID>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Tue, 16 Jun 2015 09:27:07 +0000</Value>
+		</MIMEField>
+		<Domain>BESC</Domain>
+		<DefaultAction ID="Action1">
+			<Description>
+				<PreLink>Click </PreLink>
+				<Link>here</Link>
+				<PostLink> to deploy this action.</PostLink>
+			</Description>
+			<ActionScript MIMEType="application/x-Fixlet-Windows-Shell">// Enter your action script here
+wait /bin/bash -c "chmod 444 `find /etc/docker/certs.d/* -type f`"</ActionScript>
+		</DefaultAction>
+	</Fixlet>
+</BES>

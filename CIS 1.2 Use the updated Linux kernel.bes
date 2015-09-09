@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Fixlet>
+		<Title>CIS 1.2 Use the updated Linux kernel</Title>
+		<Description>A 3.10 Linux kernel is the minimum requirement for Docker </Description>
+		<Relevance><![CDATA[(exists package "kernel" whose (rpm version record of it < rpm package version record "3.10.0-0.el7") of rpm and version of operating system > "7.0") OR (exists package "kernel" whose (rpm version record of it  < "3.10.0-0.el6") of rpm and version of operating system < "7.0")]]></Relevance>
+		<Category></Category>
+		<Source>Internal</Source>
+		<SourceID></SourceID>
+		<SourceReleaseDate>2015-04-08</SourceReleaseDate>
+		<SourceSeverity></SourceSeverity>
+		<CVENames></CVENames>
+		<SANSID></SANSID>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Wed, 03 Jun 2015 12:24:18 +0000</Value>
+		</MIMEField>
+		<Domain>BESC</Domain>
+		<DefaultAction ID="Action1">
+			<Description>
+				<PreLink>Click </PreLink>
+				<Link>here</Link>
+				<PostLink> to deploy this action.</PostLink>
+			</Description>
+			<ActionScript MIMEType="application/x-Fixlet-Windows-Shell">// Enter your action script here</ActionScript>
+		</DefaultAction>
+	</Fixlet>
+</BES>
