@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Untrusted docker images</Title>
+		<Description><![CDATA[&lt;enter a description of the analysis here&gt; ]]></Description>
+		<Relevance>true</Relevance>
+		<Source>Internal</Source>
+		<SourceReleaseDate>2015-09-09</SourceReleaseDate>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Wed, 09 Sep 2015 12:47:08 +0000</Value>
+		</MIMEField>
+		<Domain>BESC</Domain>
+		<Property Name="Untrusted images" ID="1"><![CDATA[it whose (item 0 of item 0 of it as trimmed string != item 1 of it) of (it, lines of file "/tmp/white_image_ids.txt" as trimmed string) of (following texts of positions (start of substring "IMAGE ID" of line 1 of file "/tmp/docker_images.txt") of (preceding texts of positions (start of substring "CREATED" of line 1 of file "/tmp/docker_images.txt") of it),it) of lines whose (line number of it > 1) of file "/tmp/docker_images.txt"]]></Property>
+	</Analysis>
+</BES>
